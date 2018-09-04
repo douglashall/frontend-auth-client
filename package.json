@@ -1,0 +1,36 @@
+{
+  "name": "@edx/frontend-auth-client",
+  "version": "0.0.0-development",
+  "description": "Frontend auth client for edX auth service.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.config.js",
+    "lint": "eslint --ext .js --ext .jsx .",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edx/frontend-auth-client.git"
+  },
+  "author": "edX",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/edx/frontend-auth-client/issues"
+  },
+  "homepage": "https://github.com/edx/frontend-auth-client#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.2.0",
+    "eslint-config-edx": "^4.0.4",
+    "jest": "23.4.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jwt-decode": "^2.2.0",
+    "universal-cookie": "^3.0.4"
+  }
+}
