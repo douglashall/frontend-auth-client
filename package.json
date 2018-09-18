@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-auth-client",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Frontend auth client for edX auth service.",
   "main": "dist/main.js",
   "scripts": {
@@ -19,18 +19,45 @@
   },
   "homepage": "https://github.com/edx/frontend-auth-client#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-rewire": "^1.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.2.0",
     "eslint-config-edx": "^4.0.4",
     "jest": "23.4.0",
+    "react-dom": "^16.2.0",
+    "redux-mock-store": "^1.5.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "jwt-decode": "^2.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "source-map-loader": "^0.2.1",
     "universal-cookie": "^3.0.4"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/setupTest.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/setupTest.js",
+      "!src/index.js",
+      "!**/node_modules/**",
+      "!**/tests/**"
+    ]
   }
 }
